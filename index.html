@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<title>Frontend Mentor | Interactive card details form</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+    	.attribution { font-size: 12px; text-align: center; width:100%; background-color: black; padding: 5px}
+    	.attribution a { color: hsl(228, 45%, 44%); }
+	</style>
+</head>
+<body>
+	<div id="container">
+		<section id="cards-section">
+			<div id="card-back">
+				<img class="bg-card" src="./images/bg-card-back.png">
+				<div id="card-back-info">
+					<p id="card-cvc">000</p>
+				</div>
+			</div>
+
+			<div id="card-front">
+				<img class="bg-card" src="./images/bg-card-front.png">
+
+				<div id="card-front-info">
+					<div id="card-top">
+						<img id="card-front-logo" src="./images/card-logo.svg">
+						<p id="card-number">0000 0000 0000 0000</p>
+					</div>
+					<div id="card-bottom">
+						<p id="card-holdername">Jane Appleseed</p>
+						<p id="card-exp-date"><span id="card-expmonth">00</span>/<span id="card-expyear">00</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<main>
+			<section id="form-section">
+				<form action="" method="POST">
+					<div id="form-top">
+						<label class="form-label">Cardholder Name</label><br>
+						<input id="card-holdername-input" class="form-input form-top-inputs" type="text" placeholder="e.g. Jane Appleseed"><br>
+						<span id="card-holdername-error" class="input-error-msg">Can't be blank.</span><br>
+
+						<label class="form-label">Card Number</label><br>
+						<input id="card-number-input" class="form-input form-top-inputs" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19"><br>
+						<span id="card-number-error" class="input-error-msg">Wrong format, numbers only.</span>
+					</div>
+
+					<div id="form-bottom">
+						<div id="style-date-container">
+							<div id="input-date-container">
+								<label class="form-label">Exp. Date (MM/YY)</label><br>
+								<input id="card-expmonth-input" class="form-input form-date-inputs" type="number" placeholder="MM" min="0" max="99">
+								<input id="card-expyear-input" class="form-input form-date-inputs" type="number" placeholder="YY" min="0" max="99">
+							</div>
+							<span id="card-date-error" class="input-error-msg">Cant't be blank</span>
+						</div>
+										
+						<div id="input-cvc-container">
+							<label class="form-label">CVC</label><br>
+							<input id="card-cvc-input" class="form-input" type="number" placeholder="e.g. 123" min="0" max="999"><br>
+							<span id="card-cvc-error" class="input-error-msg">Cant't be blank</span>
+						</div>
+					</div>
+
+					<button id="form-submit-button" type="submit">Confirm</button>
+				</form>
+			</section>
+
+			<!-- Completed state start -->
+
+			<section id="form-complete">
+				<div id="complete-state-container">
+					<img id="form-complete-logo" src="./images/icon-complete.svg">
+					<h1 id="form-complete-title">Thank you!</h1>
+					<p id="form-complete-message">We've added your card details</p>
+					<a id="form-continue-button" href="#">Continue</a>	
+				</div>
+			</section>
+		</main>
+	</div>
+
+  	<div class="attribution">
+	    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+	    Coded by <a href="https://github.com/thalesmariiano">Thales Mariano (THΔLES)</a>.
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
